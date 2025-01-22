@@ -1,0 +1,73 @@
+/* Reset configuraçao padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* DM Sans Google font & Font styles*/
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+.light {
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: 200;
+}
+
+.bold {
+  font-family: "DM Sans", sans-serif !important;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: "DM Sans";
+}
+
+h4 {
+  font-size: 14px;
+}
+
+body {
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+/* ******************* Header Navbar */
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1152px;
+  height: 104px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-texts {
+  display: flex;
+  width: 25%;
+  justify-content: space-between;
+}
+
+#nav-btn-hamburguerMenu {
+  max-width: 48px;
+  max-height: 48px;
+  align-items: center;
+}
+
+/* ******************* Main */
+
+main {
+  max-width: 1152px;
+}
+
+/* ******************* Hero */
