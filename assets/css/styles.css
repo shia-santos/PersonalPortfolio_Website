@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Garamond";
-  src: url("assets\fonts\itc-garamond-std-light-condensed-italic.otf");
+  src: url("/assets/fonts/itc-garamond-std-light-condensed-italic.ttf");
 }
 
 :root {
@@ -19,7 +19,7 @@
   --color-background: #f9f9f9;
 
   /* Space */
-  --spacing-between-sections: 248px;
+  --spacing-between-sections: 280px;
 }
 
 /* Reset configuraçao padrão */
@@ -34,13 +34,14 @@
 .h1garamond {
   font-family: var(--font-secondary);
   font-style: italic;
-  font-size: 224px;
+  font-size: 200px;
+  letter-spacing: 2px;
   color: var(--color-primary);
 }
 
 .h1dmsans {
   font-family: var(--font-primary);
-  font-size: 220px;
+  font-size: 200px;
   letter-spacing: -6px;
   font-weight: 300;
   color: var(--color-primary);
@@ -67,6 +68,7 @@ h3 {
   font-family: var(--font-secondary);
   font-style: italic;
   font-size: 40px;
+  letter-spacing: 2px;;
   color: var(--color-primary);
 }
 
@@ -98,6 +100,10 @@ p {
   font-size: 16px;
   font-weight: 300;
   color: var(--color-primary);
+}
+
+p.bold {
+  font-weight: 600;
 }
 
 /* ******************* Body */
@@ -187,6 +193,7 @@ main {
   flex-direction: column;
   justify-content: left;
   width: 100%;
+  padding-bottom: var(--spacing-between-sections);
 }
 
 .selected-projects h3 {
@@ -203,6 +210,11 @@ main {
 #accordion-button {
   background-color: var(--color-background);
   padding-left: 0;
+}
+
+#project h5 {
+  width: 200px;
+  color: var(--color-secondary);
 }
 
 #project h4 {
@@ -244,3 +256,45 @@ main {
 .accordion-text p {
   margin: 0;
 }
+
+
+/* ******************* Experience */
+
+.experience {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+  padding-bottom: var(--spacing-between-sections);
+}
+
+.experience h3 {
+  margin-bottom: 104px;
+  width: 100%;
+  text-align: left; /* Alinha à esquerda */
+  padding: 0; /* Remove espaçamento interno */
+  margin: 0 0 104px 0; /* Remove margens extras */
+}
+
+.experience-container {
+margin-left: 20%;
+display: flex;
+padding-bottom: 40px;
+}
+
+#date {
+  flex-shrink: 0;
+  width: 100px;
+  color: var(--color-secondary);
+  }
+
+#info {
+    margin-left: 20%;
+
+    }
+
+
+
+
+
