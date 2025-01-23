@@ -1,3 +1,27 @@
+/* ROOT */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@font-face {
+  font-family: "Garamond";
+  src: url("assets\fonts\itc-garamond-std-light-condensed-italic.otf");
+}
+
+:root {
+  /* Fontes */
+  --font-primary: "DM Sans", sans-serif; /* Fonte principal Google Font */
+  --font-secondary: "Garamond", serif; /* Fonte secundária */
+
+  /* Cores */
+  --color-primary: #232323;
+  --color-secondary: #6e7275;
+  --color-secondary2: #e7e5e6;
+  --color-background: #f9f9f9;
+
+  /* Space */
+  --spacing-between-sections: 248px;
+}
+
 /* Reset configuraçao padrão */
 * {
   margin: 0;
@@ -5,32 +29,86 @@
   box-sizing: border-box;
 }
 
-/* DM Sans Google font & Font styles*/
+/* H1 (Hero) */
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-
-.light {
-  font-family: "DM Sans", sans-serif !important;
-  font-weight: 200;
+.h1garamond {
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-size: 224px;
+  color: var(--color-primary);
 }
 
-.bold {
-  font-family: "DM Sans", sans-serif !important;
-  font-weight: 600;
+.h1dmsans {
+  font-family: var(--font-primary);
+  font-size: 220px;
+  letter-spacing: -6px;
+  font-weight: 300;
+  color: var(--color-primary);
 }
 
-h1 {
-  font-family: "DM Sans";
+/* H2, H3, H4, H5, p */
+
+h2,
+h4,
+h5,
+p {
+  font-family: var(--font-primary);
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+/* H2 (Hero) */
+h2 {
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+h3 {
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-size: 40px;
+  color: var(--color-primary);
 }
 
 h4 {
-  font-size: 14px;
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--color-primary);
 }
+
+/* h5 -Captions */
+
+h5 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+h5.bold {
+  font-weight: 700;
+}
+
+h5.light {
+  font-weight: 300;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+
+/* ******************* Body */
 
 body {
   max-width: 100%;
   margin: auto;
   position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-background);
 }
 
 /* ******************* Header Navbar */
@@ -40,7 +118,9 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: var(--color-background);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  z-index: 1;
 }
 
 .nav-container {
@@ -67,7 +147,100 @@ header {
 /* ******************* Main */
 
 main {
+  width: 100%;
   max-width: 1152px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  top: 104px;
 }
 
 /* ******************* Hero */
+
+.hero {
+  padding-bottom: var(--spacing-between-sections);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+}
+
+.hero #h1garamond {
+  margin-top: 24%;
+  margin-bottom: -8%;
+}
+
+.hero #h1dmsans {
+  margin-left: 14%;
+}
+
+.hero #h2 {
+  margin-left: 64%;
+}
+
+/* ******************* Selected Projects */
+
+.selected-projects {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+}
+
+.selected-projects h3 {
+  margin-bottom: 104px;
+  width: 100%;
+}
+
+/*accordion*/
+
+.container.mt-5 {
+  padding: 0; /
+}
+
+#accordion-button {
+  background-color: var(--color-background);
+  padding-left: 0;
+}
+
+#project h4 {
+  margin-left: 20%;
+}
+
+.accordion-body {
+  display: flex; 
+  align-items: flex-start; 
+  padding: 40px 0; 
+  
+}
+
+.accordion  {
+  --bs-accordion-border-color: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none; 
+}
+
+.accordion-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.accordion-text {
+  flex: 1;
+  margin-right: 8%; 
+  margin-left: 8%;
+}
+
+.accordion-text #grey {
+  margin-bottom: 40px;
+  color: var(--color-secondary);
+}
+
+.accordion-text p {
+  margin: 0;
+}
