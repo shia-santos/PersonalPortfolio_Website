@@ -17,6 +17,7 @@
 
   <body>
     <!-- Nav -->
+    <!-- Nav -->
     <header class="header-container">
       <nav class="nav-container">
         <div id="nav-texts">
@@ -31,7 +32,7 @@
           </div>
         </div>
 
-        <div id="nav-btn-hamburguerMenu">
+        <div id="hamburguerMenu" class="hamburguerMenu">
           <img
             src="./assets/img/menuHamburguer.png"
             alt="hamburguer menu icon"
@@ -39,6 +40,24 @@
         </div>
       </nav>
     </header>
+
+    <!-- Menu Overlay -->
+    <div id="menuOverlay" class="menu-overlay">
+      <div class="menu-content">
+        <h3>Selected Projects</h3>
+        <h3>Experience</h3>
+        <h3>Skills</h3>
+        <h3>Education</h3>
+        <h3>About me</h3>
+        <h3>Contact me</h3>
+      </div>
+      <div id="closeMenu" class="close-menu">
+        <img
+          src="./assets/img/menuHamburguerFechar.png"
+          alt="close menu icon"
+        />
+      </div>
+    </div>
 
     <main>
       <!-- Hero -->
@@ -50,6 +69,12 @@
           that believes in <br />
           designing with purpose.
         </h2>
+
+        <!--4 Hero Elements-->
+        <img src="./assets/img/elemento1.png" class="image" id="image1" />
+        <img src="./assets/img/elemento2.png" class="image" id="image2" />
+        <img src="./assets/img/elemento3.png" class="image" id="image3" />
+        <img src="./assets/img/elemento4.png" class="image" id="image4" />
       </section>
 
       <!-- Selected Projects -->
@@ -333,7 +358,7 @@
       <section class="experience">
         <h3>Experience</h3>
 
-        <div class="experience">
+        <div class="experience-list">
           <!-- experience 1 -->
           <div class="experience-container">
             <p id="date">2023 — 2024</p>
@@ -389,9 +414,96 @@
 
       <!-- Skills -->
 
-      <!-- Education -->
+      <section class="skills">
+        <h3>Skills</h3>
+      </section>
 
+      <!-- Education -->
+      <section class="education">
+        <h3>Education</h3>
+
+        <div class="education-list">
+          <!-- education 1 -->
+          <div class="education-container">
+            <p id="date">2024 — 2025</p>
+            <div id="info">
+              <p class="bold">Frontend Development</p>
+              <p>CESAE (Porto)</p>
+            </div>
+          </div>
+          <!-- education 2 -->
+          <div class="education-container">
+            <p id="date">2022 — 2023</p>
+            <div id="info">
+              <p class="bold">UX/UI</p>
+              <p>EDIT (Lisbon)</p>
+            </div>
+          </div>
+          <!-- education 3 -->
+          <div class="education-container">
+            <p id="date">2016 — 2018</p>
+            <div id="info">
+              <p class="bold">
+                Contemporary Typographic and Editorial Practices Master Degree
+              </p>
+              <p>FBAUL (Lisbon)</p>
+            </div>
+          </div>
+          <!-- education 4 -->
+          <div class="education-container">
+            <p id="date">2016 — 2017</p>
+            <div id="info">
+              <p class="bold">Semester in Illustration</p>
+              <p>AKV St.Joost (Breda, Holanda)</p>
+            </div>
+          </div>
+          <!-- education 5 -->
+          <div class="education-container">
+            <p id="date">2012 — 2016</p>
+            <div id="info">
+              <p class="bold">Communication Design Degree</p>
+              <p>FBAUP (Porto)</p>
+            </div>
+          </div>
+          <!-- education 6 -->
+          <div class="education-container">
+            <p id="date">2009 — 2012</p>
+            <div id="info">
+              <p class="bold">Audiovisual Communication</p>
+              <p>Escola Artística de Soares dos Reis (Porto)</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- About me -->
+      <section class="about-me">
+        <h3>
+          In a Middle-earth quest, seeking<br />visual creative solutions...
+        </h3>
+
+        <img src="assets/img/aboutme.png" />
+
+        <div class="paragraphs-container">
+          <p>
+            My name is Sofia Santos, but you can call me Shia. I’m a UX/UI
+            Designer who recently became a Frontend Developer, which enables me
+            to follow each project from start to finish—designing, building, and
+            refining it. This gives me the opportunity to create solutions that
+            are visually appealing, meaningful, and functional. <br />I’m always
+            working to improve my communication and to be collaborative and
+            proactive, bringing enthusiasm, curiosity, and a touch of humour to
+            everything I do.
+          </p>
+          <p>
+            Committed to continuous learning, I embrace mistakes as
+            opportunities for growth and stay open to new discoveries along the
+            way. <br />I also have a deep curiosity about other cultures and am
+            always looking to learn new skills—whether it's mastering a design
+            tool, exploring a coding technique, or even how to make the perfect
+            negroni.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer></footer>

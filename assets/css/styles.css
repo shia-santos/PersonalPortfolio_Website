@@ -19,7 +19,7 @@
   --color-background: #f9f9f9;
 
   /* Space */
-  --spacing-between-sections: 280px;
+  --spacing-between-sections: 200px;
 }
 
 /* Reset configuraçao padrão */
@@ -144,10 +144,44 @@ header {
   justify-content: space-between;
 }
 
-#nav-btn-hamburguerMenu {
+#hamburguerMenu {
   max-width: 48px;
   max-height: 48px;
   align-items: center;
+}
+
+/* ******************* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  right: -30%; 
+  width: 30%;
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: right 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.menu-content{
+  margin-left: 20%;
+  margin-top: 28%;
+}
+
+.menu-content h3 {
+  color: var(--color-background);
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+
+.menu-content h3:hover {
+  opacity: 0.5;
+}
+
+.close-menu {
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  cursor: pointer;
 }
 
 /* ******************* Main */
@@ -170,6 +204,8 @@ main {
   justify-content: start;
   flex-direction: column;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero #h1garamond {
@@ -182,8 +218,111 @@ main {
 }
 
 .hero #h2 {
-  margin-left: 64%;
+  margin-left: 48%;
 }
+
+/* Estilo geral para as imagens */
+.hero .image {
+  position: absolute; 
+  opacity: 0; 
+  animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+}
+
+/* ******************* Animações das Imagens */
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+    transform: translate(50%, 50%); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); 
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translate(50%, -50%); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); 
+  }
+}
+
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); 
+  }
+}
+
+@keyframes fadeIn4 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 50%); 
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); 
+  }
+}
+
+/* ******************* Aplicação de Estilo às Imagens */
+#image1 {
+  bottom: 2%; 
+  right: 10%; 
+  max-height: 220px;
+  height: 100%; 
+  max-width: 100%; 
+  animation-name: fadeIn1;
+  animation-delay: 0.5s; 
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#image2 {
+  top: 10%; 
+  right: 10%; 
+  max-height: 300px;
+  height: 100%; 
+  max-width: 100%; 
+  animation-name: fadeIn2;
+  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#image3 {
+  top: 16%; 
+  left: 16%; 
+  max-height: 100px;
+  height: 100%; 
+  max-width: 100%; 
+  animation-name: fadeIn3;
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#image4 {
+  bottom: 4%; 
+  left: 1%;
+  max-height: 300px;
+  height: 100%; 
+  max-width: 100%; 
+  animation-name: fadeIn4;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
 
 /* ******************* Selected Projects */
 
@@ -197,6 +336,7 @@ main {
 }
 
 .selected-projects h3 {
+  padding-top: 100px;
   margin-bottom: 104px;
   width: 100%;
 }
@@ -266,15 +406,16 @@ main {
   flex-direction: column;
   justify-content: left;
   width: 100%;
+
   padding-bottom: var(--spacing-between-sections);
 }
 
 .experience h3 {
   margin-bottom: 104px;
   width: 100%;
-  text-align: left; /* Alinha à esquerda */
-  padding: 0; /* Remove espaçamento interno */
-  margin: 0 0 104px 0; /* Remove margens extras */
+  text-align: left; 
+  padding: 0; 
+  margin: 0 0 104px 0; 
 }
 
 .experience-container {
@@ -287,14 +428,99 @@ padding-bottom: 40px;
   flex-shrink: 0;
   width: 100px;
   color: var(--color-secondary);
-  }
+}
 
 #info {
     margin-left: 20%;
 
-    }
+}
 
 
+/* ******************* Skills */
+
+.skills {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+  padding-bottom: var(--spacing-between-sections);
+}
+
+.skills h3 {
+  margin-bottom: 104px;
+  width: 100%;
+  text-align: left; 
+  padding: 0; 
+  margin: 0 0 104px 0; 
+}
+
+/* ******************* Education */
+
+.education {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+  padding-bottom: var(--spacing-between-sections);
+}
+
+.education h3 {
+  margin-bottom: 104px;
+  width: 100%;
+  text-align: left; 
+  padding: 0; 
+  margin: 0 0 104px 0; 
+}
+
+.education-container {
+  margin-left: 20%;
+  display: flex;
+  padding-bottom: 40px;
+}
 
 
+/* ******************* About me */
 
+.about-me {
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100%;
+  padding-bottom: var(--spacing-between-sections);
+}
+
+.about-me h3 {
+  margin-bottom: 104px;
+  width: 100%;
+  text-align: left; 
+  padding: 0; 
+  margin: 0 0 104px 0; 
+}
+
+.about-me img{
+  max-height: 480px;
+  height: 100%; 
+  max-width: 100%; 
+  object-fit: contain; 
+}
+
+.paragraphs-container{
+  margin-left: 20%;
+  margin-top: 80px;
+  display: flex;
+  padding-bottom: 40px;
+  gap: 20px;
+}
+
+.paragraphs-container p{
+  flex: 1;
+  max-width: 50%;
+}
+.paragraphs-container p br {
+  content: "";
+  display: block;
+  margin-bottom: 20px;
+}
