@@ -1,20 +1,31 @@
 // **************** ABRIR E FECHAR MENU HAMBURGUER
 
-const hamburguerMenu = document.getElementById("hamburguerMenu");
-const closeMenu = document.getElementById("closeMenu");
-const menuOverlay = document.getElementById("menuOverlay");
+document.addEventListener("DOMContentLoaded", () => {
+  const menuOverlay = document.getElementById("menuOverlay");
+  const menuIcon = document.getElementById("menuIcon");
 
-// Função para abrir o menu
-hamburguerMenu.addEventListener("click", () => {
-  menuOverlay.style.right = "0";
-});
+  // Abrir o menu
+  menuIcon.addEventListener("click", () => {
+    if (menuOverlay.classList.contains("active")) {
+      menuOverlay.classList.remove("active");
+      menuIcon.src = "./assets/img/menuHamburguer.png";
+    } else {
+      menuOverlay.classList.add("active");
+      menuIcon.src = "./assets/img/menuHamburguerFechar.png";
+    }
+  });
 
-// Função para fechar o menu
-closeMenu.addEventListener("click", () => {
-  menuOverlay.style.right = "-30%";
+  // Fechar o menu
+  menuOverlay.addEventListener("click", (e) => {
+    if (e.target === menuOverlay) {
+      menuOverlay.classList.remove("active");
+      menuIcon.src = "./assets/img/menuHamburguer.png";
+    }
+  });
 });
 
 // **************** EFEITO SCROLLREVEAL
+
 document.addEventListener("DOMContentLoaded", function () {
   window.revel = ScrollReveal({
     reset: true,
