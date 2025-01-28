@@ -471,10 +471,10 @@ padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   height: 300px; 
-  border: 1px solid #ddd;
   padding: 24px;
   position: relative;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
 .texts {
@@ -644,56 +644,59 @@ padding-bottom: 40px;
 .footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   background-color: var(--color-primary);
+  position: relative;
 }
 
-.footer-container{
+/* Topo do footer (contactos e socialmedia) */
+
+.footer__top{
   max-width: 1152px;
   width: 100%;
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
 }
 
-
-/* Topo do footer */
-.footer__top {
+.footer__contents {
+  max-width: 1152px; 
+  width: 100%; 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  padding: 10px;
 }
 
-.footer__contacts,
+.footer__contacts{
+  margin-top: 104px;
+  flex: 2; 
+}
+
 .footer__social-media {
-  display: flex;
-  flex-direction: column; 
-  width: 50%;
+  margin-top: 104px;
+  padding-left: 200px;
+  flex: 1; 
 }
 
 .footer__title { /*h5*/
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color:var(--color-background)
 }
 
 .footer__list-contacts h4 {
   color: var(--color-background);
+  font-weight: 400;
 }
 
 /* Botões de redes sociais */
 .footer__list-social-media {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
 }
 
 .footer__button {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 16px;
   border: 1px solid var(--color-background);
   border-radius: 25px;
   background: none;
@@ -706,25 +709,59 @@ padding-bottom: 40px;
   color: var(--color-primary);
 }
 
-/* Parte inferior */
+/* Parte bottom do footer */
+
+
 .footer__bottom {
+  max-width: 1152px;
+  width: 100%;
+  justify-content: space-between; 
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 40px;
 }
 
 .footer__talk {
   margin-bottom: 20px;
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between; 
+  padding: 10px;
 }
 
 .footer__talk-title{
+  margin-top: 148px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 0.8;
   font-family: var(--font-primary);
-  font-size: 200px;
-  letter-spacing: -6px;
+  font-size: 224px;
   font-weight: 300;
+  color: var(--color-background);
+}
+
+.footer__button--contact{
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  background: none;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.footer__button--contact:hover {
+  background: var(--color-primary);
+  color: var(--color-background);
+}
+
+.footer__button--contact img{
+  margin-left: 32px;
+}
+
+.footer__button--contact img:hover {
   color: var(--color-background);
 }
 
@@ -733,6 +770,38 @@ padding-bottom: 40px;
   margin-top: 20px;
 }
 
+.footer__hr {
+  border: 0;
+  border-top: 1px solid white;
+  opacity: 1;
+  width: 100%;
+}
+
 .footer__copyrights-text {
-  color:var(--color-background)
+  color:var(--color-background);
+  font-weight: 200;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Estilo geral para a imagem Origami Azul */
+.footer .image {
+  position: absolute;
+  bottom: 0; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  opacity: 0; 
+  animation: fadeInFromBottom 1s forwards; 
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0; 
+    transform: translateX(-50%) translateY(100%); 
+  }
+  100% {
+    opacity: 1; 
+    transform: translateX(-50%) translateY(-60%); 
+  }
 }
