@@ -44,19 +44,39 @@
       <div class="menu-overlay" id="menuOverlay">
         <div class="menu-content">
           <ul>
-            <li><h3>Selected Projects</h3></li>
-            <li><h3>Experience</h3></li>
-            <li><h3>Education</h3></li>
-            <li><h3>About me</h3></li>
-            <li><h3>Contact me</h3></li>
+            <li>
+              <a href="#selected-projects"><h3>Selected Projects</h3></a>
+            </li>
+            <li>
+              <a href="#experience"><h3>Experience</h3></a>
+            </li>
+            <li>
+              <a href="#education"><h3>Education</h3></a>
+            </li>
+            <li>
+              <a href="#about-me"><h3>About me</h3></a>
+            </li>
+            <li>
+              <a href="#footer"><h3>Contact me</h3></a>
+            </li>
           </ul>
+
+          <button
+            onclick="window.location.href='mailto:sofiabrandaosantos@gmail.com?subject=Assunto&body=Texto%20do%20corpo'"
+            class="footer__button footer__button--contact"
+          >
+            Contact me now<img
+              src="./assets/img/envelope.png"
+              alt="Ícone"
+              class="button-icon"
+            />
+          </button>
         </div>
       </div>
     </header>
 
     <main>
       <!-- Hero -->
-
       <section class="hero">
         <h1 class="h1garamond" id="h1garamond">Creative</h1>
         <h1 class="h1dmsans" id="h1dmsans">Developer</h1>
@@ -73,8 +93,7 @@
       </section>
 
       <!-- Selected Projects -->
-
-      <section class="selected-projects">
+      <section class="selected-projects" id="selected-projects">
         <h3>Selected Projects</h3>
 
         <!--accordion-->
@@ -349,8 +368,7 @@
       </section>
 
       <!-- Experience -->
-
-      <section class="experience">
+      <section class="experience" id="experience">
         <h3>Experience</h3>
 
         <div class="experience-list">
@@ -408,7 +426,6 @@
       </section>
 
       <!-- Skills -->
-
       <section class="skills">
         <div class="skills-container" id="efeito-scrollReveal1">
           <!-- Card1 -->
@@ -470,7 +487,7 @@
       </section>
 
       <!-- Education -->
-      <section class="education">
+      <section class="education" id="education">
         <h3>Education</h3>
 
         <div class="education-list">
@@ -527,7 +544,7 @@
         </div>
       </section>
       <!-- About me -->
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <h3>
           In a Middle-earth quest, seeking<br />visual creative solutions...
         </h3>
@@ -560,11 +577,14 @@
       <section class="feedback">
         <h3 class="feedback__title">What people say about me</h3>
 
+        <img src="./assets/img/elemento6.png" class="image" id="image6" />
+        <img src="./assets/img/elemento7.png" class="image" id="image7" />
+
         <div class="feedback__cards">
           <!-- Primeira fila -->
           <div class="feedback__row1">
             <!-- Card 1 -->
-            <div class="feedback__card feedback__card--primary">
+            <div class="feedback__card1">
               <div class="feedback__card-info">
                 <div class="feedback__card-header">
                   <h4 class="feedback__card-name">Paulo Doellinger</h4>
@@ -577,6 +597,7 @@
                 <h5 class="feedback__card-title">Senior Web Developer</h5>
               </div>
               <div class="feedback__card-content">
+                <img src="./assets/img/paulo.png" id="feedback-memoji" />
                 <p class="feedback__card-text">
                   "Sofia is highly focused on identifying problems and solving
                   them. During the time we worked together, she demonstrated an
@@ -588,25 +609,29 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="feedback__card feedback__card--secondary">
+            <div class="feedback__card2">
               <div class="feedback__card-info">
                 <div class="feedback__card-header">
-                  <h4 class="feedback__card-name">Maria Silva</h4>
+                  <h4 class="feedback__card-name">Zita Moura</h4>
                   <img
                     class="linkedin_icon"
                     alt="linkedin icon"
                     src="./assets/img/linkedin-icon.svg"
                   />
                 </div>
-                <h5 class="feedback__card-title">UI/UX Designer</h5>
+                <h5 class="feedback__card-title">
+                  European Portuguese Language Lead
+                </h5>
               </div>
               <div class="feedback__card-content">
+                <img src="./assets/img/zita.png" id="feedback-memoji" />
                 <p class="feedback__card-text">
-                  "Working with Sofia was a wonderful experience. She always
-                  brought creative ideas to the table and contributed
-                  significantly to the success of our projects. Her positive
-                  attitude and willingness to help made her an essential part of
-                  the team."
+                  "Working with Sofia was a pleasure. I explained what I needed
+                  and why I was concerned about execution, and within minutes,
+                  she found a solution that worked perfectly for us to
+                  collaborate asynchronously. She provided me with different
+                  options and constant feedback, without any fuss, and perfectly
+                  within the (tight) deadline I had."
                 </p>
               </div>
             </div>
@@ -615,47 +640,51 @@
           <!-- Segunda fila -->
           <div class="feedback__row2">
             <!-- Card 3 -->
-            <div class="feedback__card feedback__card--primary">
+            <div class="feedback__card3">
               <div class="feedback__card-info">
                 <div class="feedback__card-header">
-                  <h4 class="feedback__card-name">John Doe</h4>
+                  <h4 class="feedback__card-name">Patti Smith</h4>
                   <img
                     class="linkedin_icon"
                     alt="linkedin icon"
                     src="./assets/img/linkedin-icon.svg"
                   />
                 </div>
-                <h5 class="feedback__card-title">Project Manager</h5>
+                <h5 class="feedback__card-title">
+                  Pawblic Relations Specialist
+                </h5>
               </div>
               <div class="feedback__card-content">
+                <img src="./assets/img/patti.png" id="feedback-memoji" />
                 <p class="feedback__card-text">
-                  "Sofia's ability to manage complex projects and keep the team
-                  aligned is exceptional. Her dedication and focus have made a
-                  significant impact on the success of our projects. It's always
-                  a pleasure to collaborate with her."
+                  "Shia is the best mom! She gives me treats, belly rubs, and
+                  takes me on mountain adventures. She’s patient, kind, and my
+                  best friend."
                 </p>
               </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="feedback__card feedback__card--secondary">
+            <div class="feedback__card4">
               <div class="feedback__card-info">
                 <div class="feedback__card-header">
-                  <h4 class="feedback__card-name">Ana Costa</h4>
+                  <h4 class="feedback__card-name">Pedro Oliveira</h4>
                   <img
                     class="linkedin_icon"
                     alt="linkedin icon"
                     src="./assets/img/linkedin-icon.svg"
                   />
                 </div>
-                <h5 class="feedback__card-title">Software Engineer</h5>
+                <h5 class="feedback__card-title">Senior Graphic Designer</h5>
               </div>
               <div class="feedback__card-content">
+                <img src="./assets/img/pedro.png" id="feedback-memoji" />
                 <p class="feedback__card-text">
-                  "Sofia consistently exceeded expectations in every task she
-                  undertook. Her technical expertise and collaborative spirit
-                  made her an invaluable asset to the team. I hope to work with
-                  her again in the future."
+                  "Sofia is an excellent colleague. She has a strong ability to
+                  integrate into existing teams, is highly perceptive, and
+                  professional. She builds empathetic and professional
+                  relationships with all clients, always conveying confidence in
+                  the positions and ideas she shares."
                 </p>
               </div>
             </div>
@@ -665,7 +694,7 @@
     </main>
 
     <!--Footer-->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <!--infos TOP-->
       <div class="footer__top">
         <div class="footer__contents">
@@ -705,7 +734,10 @@
       <div class="footer__bottom">
         <div class="footer__talk">
           <h1 class="footer__talk-title">Let's Talk</h1>
-          <button class="footer__button footer__button--contact">
+          <button
+            onclick="window.location.href='mailto:sofiabrandaosantos@gmail.com?subject=Assunto&body=Texto%20do%20corpo'"
+            class="footer__button footer__button--contact"
+          >
             Contact me now<img
               src="./assets/img/envelope.png"
               alt="Ícone"

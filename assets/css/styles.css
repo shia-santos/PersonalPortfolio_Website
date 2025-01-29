@@ -174,6 +174,10 @@ header {
   z-index: 2;
 }
 
+.menu-overlay a{
+  text-decoration: none;
+}
+
 .menu-overlay.active {
   right: 0;
 }
@@ -223,7 +227,6 @@ main {
   flex-direction: column;
   width: 100%;
   position: relative;
-  overflow: hidden;
 }
 
 .hero #h1garamond {
@@ -295,8 +298,8 @@ main {
 /* ******************* Aplicação de Estilo às Imagens */
 #image1 {
   bottom: 2%; 
-  right: 10%; 
-  max-height: 220px;
+  right: -10%; 
+  max-height: 300px;
   height: 100%; 
   max-width: 100%; 
   animation-name: fadeIn1;
@@ -307,8 +310,8 @@ main {
 
 #image2 {
   top: 10%; 
-  right: 10%; 
-  max-height: 300px;
+  right: -10%; 
+  max-height: 350px;
   height: 100%; 
   max-width: 100%; 
   animation-name: fadeIn2;
@@ -331,8 +334,8 @@ main {
 
 #image4 {
   bottom: 4%; 
-  left: 1%;
-  max-height: 300px;
+  left: -16%;
+  max-height: 350px;
   height: 100%; 
   max-width: 100%; 
   animation-name: fadeIn4;
@@ -639,6 +642,132 @@ padding-bottom: 40px;
   margin-bottom: 20px;
 }
 
+/* ******************* Feedback */
+
+.feedback {
+  padding-bottom: var(--spacing-between-sections);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.feedback__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; 
+  width: 100%;
+  align-items: center; 
+}
+
+.feedback__title { /* H3 */
+  width: 100%;
+  text-align: left; 
+  padding: 0; 
+  margin: 0 0 104px 0; 
+}
+
+.feedback__row1, 
+.feedback__row2 {
+  display: flex;
+  width: 100%;
+}
+
+.feedback__row1 {
+  justify-content: flex-end; 
+  gap: 24px;
+}
+
+.feedback__row2 {
+  justify-content: flex-start; 
+  gap: 24px;
+}
+
+.feedback__card1, .feedback__card2, .feedback__card3, .feedback__card4{
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  max-width: 368px;
+  height: 520px;
+  background-color: var(--color-secondary2);
+  width: calc(33.33% - 12px); 
+  text-align: left;
+  display: flex;
+  flex-direction: column; 
+}
+
+.feedback__card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.feedback__card-info h5{
+  font-weight: 400;
+  font-style: italic;
+}
+
+#feedback-memoji{
+  max-width: 100%;
+  margin-top: 24px;
+}
+
+.feedback__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  flex-grow: 1; 
+}
+
+.feedback__card-text {
+  margin-top: auto; 
+  color: var(--color-secondary);
+}
+
+/* hover cards */
+.feedback__card1:hover, 
+.feedback__card2:hover, 
+.feedback__card3:hover, 
+.feedback__card4:hover {
+  background-color: var(--color-primary);
+}
+
+/* Hover para o conteúdo dentro do card */
+.feedback__card1:hover h4,
+.feedback__card2:hover h4,
+.feedback__card3:hover h4,
+.feedback__card4:hover h4,
+.feedback__card1:hover h5,
+.feedback__card2:hover h5,
+.feedback__card3:hover h5,
+.feedback__card4:hover h5{
+  color: var(--color-background)
+}
+
+/* Elementos imagens */
+.feedback .image {
+  position: absolute;
+}
+
+#image6 {
+  top: 6%; 
+  left: -20%; 
+  max-height: 550px;
+  height: auto;
+  max-width: 100%;
+}
+
+#image7 {
+  bottom: 12%; 
+  right: -16%;
+  max-height: 550px;
+  height: auto;
+  max-width: 100%;
+}
+
+
 /* ******************* Footer */
 
 .footer {
@@ -788,11 +917,10 @@ padding-bottom: 40px;
 /* Estilo geral para a imagem Origami Azul */
 .footer .image {
   position: absolute;
-  bottom: 0; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  opacity: 0; 
-  animation: fadeInFromBottom 1s forwards; 
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /
 }
 
 @keyframes fadeInFromBottom {
