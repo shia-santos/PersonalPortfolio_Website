@@ -203,6 +203,11 @@ header {
   right: 20px;
 }
 
+.menu-content button {
+  margin-top: 10%;
+}
+
+
 
 /* ******************* Main */
 
@@ -721,9 +726,13 @@ padding-bottom: 40px;
   flex-grow: 1; 
 }
 
-.feedback__card-text {
-  margin-top: auto; 
-  color: var(--color-secondary);
+.mensagem-linkedin{
+display: none;
+color: var(--color-background);
+}
+
+.linkedin_icon_branco{
+display: none;
 }
 
 /* hover cards */
@@ -870,28 +879,30 @@ padding-bottom: 40px;
   color: var(--color-background);
 }
 
-.footer__button--contact{
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 25px;
-  background: none;
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  cursor: pointer;
-  margin-bottom: 10px;
+.contactme__button{
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  border-radius: 25px !important;
+  background-color: var(--color-background) !important;
+  color: var(--color-primary) !important;
+  cursor: pointer !important;
+  margin-bottom: 10px !important;
+  border: none;
 }
 
-.footer__button--contact:hover {
-  background: var(--color-primary);
-  color: var(--color-background);
+.contactme__button:hover {
+  background: var(--color-primary) !important;
+  color: var(--color-background) !important;
+  border: var(--color-background) solid 1px;
+  b
 }
 
-.footer__button--contact img{
-  margin-left: 32px;
+.contactme__button img{
+  margin-left: 32px !important;
 }
 
-.footer__button--contact img:hover {
-  color: var(--color-background);
+.contactme__button img:hover {
+  color: var(--color-background) !important;
 }
 
 /* Direitos autorais */
