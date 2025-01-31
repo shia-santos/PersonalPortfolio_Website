@@ -203,6 +203,10 @@ header {
   right: 20px;
 }
 
+.menu-content button {
+  margin-top: 10%;
+}
+
 
 /* ******************* Main */
 
@@ -642,7 +646,7 @@ padding-bottom: 40px;
   margin-bottom: 20px;
 }
 
-/* ******************* Feedback */
+/* ******* Feedback */
 
 .feedback {
   padding-bottom: var(--spacing-between-sections);
@@ -721,9 +725,13 @@ padding-bottom: 40px;
   flex-grow: 1; 
 }
 
-.feedback__card-text {
-  margin-top: auto; 
-  color: var(--color-secondary);
+.mensagem-linkedin{
+display: none;
+color: var(--color-background);
+}
+
+.linkedin_icon_branco{
+display: none;
 }
 
 /* hover cards */
@@ -870,7 +878,9 @@ padding-bottom: 40px;
   color: var(--color-background);
 }
 
-.footer__button--contact{
+/* Footer botão */
+
+.contactme__button{
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 25px;
@@ -879,20 +889,18 @@ padding-bottom: 40px;
   color: var(--color-primary);
   cursor: pointer;
   margin-bottom: 10px;
+  border: 1px solid var(--color-background);
 }
 
-.footer__button--contact:hover {
+.contactme__button:hover {
   background: var(--color-primary);
   color: var(--color-background);
 }
 
-.footer__button--contact img{
+.contactme__button img{
   margin-left: 32px;
 }
 
-.footer__button--contact img:hover {
-  color: var(--color-background);
-}
 
 /* Direitos autorais */
 .footer__copyrights {

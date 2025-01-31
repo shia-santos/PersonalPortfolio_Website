@@ -86,60 +86,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // **************** HOVER CARDS FEEDBACK
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Seleciona todos os cards
-  const cards = document.querySelectorAll(
-    ".feedback__card1, .feedback__card2, .feedback__card3, .feedback__card4"
-  );
+const cardsTodos = document.querySelectorAll(".cards_feedback_hover");
 
-  function handleMouseOver(event) {
-    const card = event.currentTarget;
-    const textElement = card.querySelector(".feedback__card-text");
+function hoverFeedback(event) {
+  const card = event.currentTarget; // Captura o card específico que acionou o evento
+  const H4novo = card.querySelector(".mensagem-linkedin");
+  const pAntigo = card.querySelector(".feedback__card-text");
+  const linkedinIconAntigo = card.querySelector(".linkedin_icon");
+  const linkedinIconNovo = card.querySelector(".linkedin_icon_branco");
 
-    const newH4 = document.createElement("h4");
-    newH4.classList.add("hover-text");
+  H4novo.style.display = "flex";
+  pAntigo.style.display = "none";
+  linkedinIconAntigo.style.display = "none";
+  linkedinIconNovo.style.display = "flex";
+}
 
-    if (
-      card.classList.contains("feedback__card1") ||
-      card.classList.contains("feedback__card2") ||
-      card.classList.contains("feedback__card4")
-    ) {
-      newH4.textContent = "Feel free to reach out directly via LinkedIn!";
-    } else if (card.classList.contains("feedback__card3")) {
-      newH4.textContent = "Sorry, but my dog doesn’t have a LinkedIn account!";
-    }
+function hoverFeedback2(event) {
+  const card = event.currentTarget; // Captura o card específico que acionou o evento
+  const H4novo = card.querySelector(".mensagem-linkedin");
+  const pAntigo = card.querySelector(".feedback__card-text");
+  const linkedinIconAntigo = card.querySelector(".linkedin_icon");
+  const linkedinIconNovo = card.querySelector(".linkedin_icon_branco");
 
-    card.replaceChild(newH4, textElement);
-  }
+  H4novo.style.display = "none";
+  pAntigo.style.display = "flex";
+  linkedinIconAntigo.style.display = "flex";
+  linkedinIconNovo.style.display = "none";
+}
 
-  function handleMouseOut(event) {
-    const card = event.currentTarget;
-    const newH4 = card.querySelector(".hover-text");
-
-    const originalText = card.querySelector(".feedback__card-text");
-    card.replaceChild(originalText, newH4);
-  }
-
-  cards.forEach((card) => {
-    card.addEventListener("mouseover", handleMouseOver);
-    card.addEventListener("mouseout", handleMouseOut);
-  });
+// Adiciona eventos de mouseover e mouseout para cada card individualmente
+cardsTodos.forEach((card) => {
+  card.addEventListener("mouseover", hoverFeedback);
+  card.addEventListener("mouseout", hoverFeedback2);
 });
 
 // **************** BOTAO CONTACT ME HOVER ICONE PARA BRANCO
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector(".footer__button--contact");
-  const icon = button.querySelector(".button-icon");
+  const buttons = document.querySelectorAll(".contactme__button");
 
-  const originalSrc = icon.src;
+  buttons.forEach((button) => {
+    const icon = button.querySelector(".button-icon");
+    const originalSrc = icon.src;
+    const hoverSrc = "./assets/img/envelopeHover.png";
 
-  const hoverSrc = "./assets/img/envelopeHover.png";
+    button.addEventListener("mouseover", () => {
+      icon.src = hoverSrc;
+    });
 
-  button.addEventListener("mouseover", () => {
-    icon.src = hoverSrc;
-  });
-
-  button.addEventListener("mouseout", () => {
-    icon.src = originalSrc;
+    button.addEventListener("mouseout", () => {
+      icon.src = originalSrc;
+    });
   });
 });
