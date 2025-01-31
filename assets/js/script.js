@@ -87,8 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // **************** HOVER H4 E ICON LINKEDIN CARDS FEEDBACK
 const cardsTodos = document.querySelectorAll(".cards_feedback_hover");
 
-const cardsTodos = document.querySelectorAll(".cards_feedback_hover");
-
 function hoverFeedback(event) {
   const card = event.currentTarget; // Captura o card específico que acionou o evento
   const H4novo = card.querySelector(".mensagem-linkedin");
