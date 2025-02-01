@@ -1,695 +1,938 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Sofia Santos</title>
+    <!-- Link bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio Sofia Santos</title>
-  <!-- Link bootstrap -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-</head>
+  <body>
+    <!-- Nav -->
+    <header class="header-container">
+      <nav class="nav-container">
+        <div id="nav-texts">
+          <div class="nav-name">
+            <h5 class="bold">Sofia Santos</h5>
+            <h5 class="light">Portfolio</h5>
+          </div>
 
-<body>
-  <!-- Nav -->
-  <header class="header-container">
-    <nav class="nav-container">
-      <div id="nav-texts">
-        <div class="nav-name">
-          <h5 class="bold">Sofia Santos</h5>
-          <h5 class="light">Portfolio</h5>
+          <div class="nav-jobLocation">
+            <h5 class="light">Creative Developer</h5>
+            <h5 class="light">Porto, Portugal</h5>
+          </div>
         </div>
 
-        <div class="nav-jobLocation">
-          <h5 class="light">Creative Developer</h5>
-          <h5 class="light">Porto, Portugal</h5>
+        <div class="menu-open-icon">
+          <img
+            id="menuIcon"
+            src="./assets/img/menuHamburguer.png"
+            alt="hamburguer menu icon"
+          />
         </div>
-      </div>
+      </nav>
 
-      <div class="menu-open-icon">
-        <img id="menuIcon" src="./assets/img/menuHamburguer.png" alt="hamburguer menu icon" />
-      </div>
-    </nav>
+      <!-- Menu Overlay -->
+      <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a href="#selected-projects">
+                <h3>Selected Projects</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#experience">
+                <h3>Experience</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#education">
+                <h3>Education</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#about-me">
+                <h3>About me</h3>
+              </a>
+            </li>
+            <li>
+              <a href="#footer">
+                <h3>Contact me</h3>
+              </a>
+            </li>
 
-    <!-- Menu Overlay -->
-    <div class="menu-overlay" id="menuOverlay">
-      <div class="menu-content">
-        <ul>
-          <li>
-            <a href="#selected-projects">
-              <h3>Selected Projects</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#experience">
-              <h3>Experience</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#education">
-              <h3>Education</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#about-me">
-              <h3>About me</h3>
-            </a>
-          </li>
-          <li>
-            <a href="#footer">
-              <h3>Contact me</h3>
-            </a>
-          </li>
-
-          <button
-            onclick="window.location.href='mailto:sofiabrandaosantos@gmail.com?subject=Assunto&body=Texto%20do%20corpo'"
-            class="contactme__button">
-            Contact me now<img src="./assets/img/envelope.png" alt="Ícone" class="button-icon" />
-          </button>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <h1 class="h1garamond" id="h1garamond">Creative</h1>
-      <h1 class="h1dmsans" id="h1dmsans">Developer</h1>
-      <h2 id="h2">
-        that believes in <br />
-        designing with purpose.
-      </h2>
-
-      <!--4 Hero Elements-->
-      <img src="./assets/img/elemento1.png" class="image" id="image1" />
-      <img src="./assets/img/elemento2.png" class="image" id="image2" />
-      <img src="./assets/img/elemento3.png" class="image" id="image3" />
-      <img src="./assets/img/elemento4.png" class="image" id="image4" />
-    </section>
-
-    <!-- Selected Projects -->
-    <section class="selected-projects" id="selected-projects">
-      <h3>Selected Projects</h3>
-
-      <!--accordion-->
-
-      <div class="container mt-5">
-        <div class="accordion" id="accordionProjects">
-          <!-- Project 1 -->
-          <div id="project">
-            <div class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="accordion-button">
-                <h5 id="grey">Graphic Design & Illustration</h5>
-                <h4>Music Posters & Artwork</h4>
-              </button>
-              <hr />
-            </div>
-
-            <div id="collapseOne" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="accordion-img">
-                  <img src="./assets/img/Projecto1-1.png" alt="Project Image" />
-                </div>
-                <div class="accordion-text">
-                  <h5 id="grey">
-                    Photoshop / Illustrator / Illustration / Collage
-                  </h5>
-                  <p>
-                    As soon as I moved to Lisbon in 2016 I started a very
-                    strong relationship with the city's musical culture. I
-                    organized concerts, got involved in event production and
-                    developed printed and digital graphic materials (posters,
-                    flyers, banners, among others) with the aim of promoting
-                    these same events. Here you have some examples of artworks
-                    created.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div id="project">
-            <div class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="accordion-button">
-                <h5 id="grey">UX/UI & Graphic Design</h5>
-                <h4>MP Brand & Website</h4>
-              </button>
-              <hr />
-            </div>
-
-            <div id="collapseTwo" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="accordion-img">
-                  <img src="./assets/img/Projecto1-1.png" alt="Project Image" />
-                </div>
-                <div class="accordion-text">
-                  <h5 id="grey">
-                    Photoshop / Illustrator / Illustration / Collage
-                  </h5>
-                  <p>
-                    As soon as I moved to Lisbon in 2016 I started a very
-                    strong relationship with the city's musical culture. I
-                    organized concerts, got involved in event production and
-                    developed printed and digital graphic materials (posters,
-                    flyers, banners, among others) with the aim of promoting
-                    these same events. Here you have some examples of artworks
-                    created.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div id="project">
-            <div class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                id="accordion-button">
-                <h5 id="grey">UX/UI & Graphic Design</h5>
-                <h4>Advertising Campaign</h4>
-              </button>
-              <hr />
-            </div>
-
-            <div id="collapseThree" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="accordion-img">
-                  <img src="./assets/img/Projecto1-1.png" alt="Project Image" />
-                </div>
-                <div class="accordion-text">
-                  <h5 id="grey">
-                    Photoshop / Illustrator / Illustration / Collage
-                  </h5>
-                  <p>
-                    As soon as I moved to Lisbon in 2016 I started a very
-                    strong relationship with the city's musical culture. I
-                    organized concerts, got involved in event production and
-                    developed printed and digital graphic materials (posters,
-                    flyers, banners, among others) with the aim of promoting
-                    these same events. Here you have some examples of artworks
-                    created.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div id="project">
-            <div class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="accordion-button">
-                <h5 id="grey">Frontend & Team Lead</h5>
-                <h4>Shape Up Website</h4>
-              </button>
-              <hr />
-            </div>
-
-            <div id="collapseFour" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="accordion-img">
-                  <img src="./assets/img/Projecto1-1.png" alt="Project Image" />
-                </div>
-                <div class="accordion-text">
-                  <h5 id="grey">
-                    Photoshop / Illustrator / Illustration / Collage
-                  </h5>
-                  <p>
-                    As soon as I moved to Lisbon in 2016 I started a very
-                    strong relationship with the city's musical culture. I
-                    organized concerts, got involved in event production and
-                    developed printed and digital graphic materials (posters,
-                    flyers, banners, among others) with the aim of promoting
-                    these same events. Here you have some examples of artworks
-                    created.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div id="project">
-            <div class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="accordion-button">
-                <h5 id="grey">Frontend</h5>
-                <h4>Flora Website</h4>
-              </button>
-              <hr />
-            </div>
-
-            <div id="collapseFive" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="accordion-img">
-                  <img src="./assets/img/Projecto1-1.png" alt="Project Image" />
-                </div>
-                <div class="accordion-text">
-                  <h5 id="grey">
-                    Photoshop / Illustrator / Illustration / Collage
-                  </h5>
-                  <p>
-                    As soon as I moved to Lisbon in 2016 I started a very
-                    strong relationship with the city's musical culture. I
-                    organized concerts, got involved in event production and
-                    developed printed and digital graphic materials (posters,
-                    flyers, banners, among others) with the aim of promoting
-                    these same events. Here you have some examples of artworks
-                    created.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div id="project">
-            <div class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" id="accordion-button">
-                <h5 id="grey">UX/UI & Graphic Design</h5>
-                <h4>ANP</h4>
-              </button>
-              <hr />
-            </div>
-
-            <div id="collapseSix" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                <div class="accordion-img">
-                  <img src="./assets/img/Projecto1-1.png" alt="Project Image" />
-                </div>
-                <div class="accordion-text">
-                  <h5 id="grey">
-                    Photoshop / Illustrator / Illustration / Collage
-                  </h5>
-                  <p>
-                    As soon as I moved to Lisbon in 2016 I started a very
-                    strong relationship with the city's musical culture. I
-                    organized concerts, got involved in event production and
-                    developed printed and digital graphic materials (posters,
-                    flyers, banners, among others) with the aim of promoting
-                    these same events. Here you have some examples of artworks
-                    created.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <button
+              onclick="window.location.href='mailto:sofiabrandaosantos@gmail.com?subject=Assunto&body=Texto%20do%20corpo'"
+              class="contactme__button"
+            >
+              Contact me now<img
+                src="./assets/img/envelope.png"
+                alt="Ícone"
+                class="button-icon"
+              />
+            </button>
+          </ul>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Experience -->
-    <section class="experience" id="experience">
-      <h3>Experience</h3>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <h1 class="h1garamond" id="h1garamond">Creative</h1>
+        <h1 class="h1dmsans" id="h1dmsans">Developer</h1>
+        <h2 id="h2">
+          that believes in <br />
+          designing with purpose.
+        </h2>
 
-      <div class="experience-list">
-        <!-- experience 1 -->
-        <div class="experience-container">
-          <p id="date">2023 — 2024</p>
-          <div id="info">
-            <p class="bold">UX UI Designer</p>
-            <p>Mesh Agency (Porto)</p>
+        <!--4 Hero Elements-->
+        <img src="./assets/img/elemento1.png" class="image" id="image1" />
+        <img src="./assets/img/elemento2.png" class="image" id="image2" />
+        <img src="./assets/img/elemento3.png" class="image" id="image3" />
+        <img src="./assets/img/elemento4.png" class="image" id="image4" />
+      </section>
+
+      <!-- Selected Projects -->
+      <section class="selected-projects" id="selected-projects">
+        <h3>Selected Projects</h3>
+
+        <!--accordion-->
+
+        <div class="container mt-5">
+          <div class="accordion" id="accordionProjects">
+            <!-- Project 1 -->
+            <div id="project">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                  id="accordion-button"
+                >
+                  <div class="accordion-titles">
+                    <h5 id="grey">Graphic Design & Illustration</h5>
+                    <h4>Music Posters & Artwork</h4>
+                  </div>
+                </button>
+                <hr />
+              </div>
+
+              <div id="collapseOne" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="accordion-img">
+                    <img
+                      src="./assets/img/Projecto1-1.png"
+                      alt="Project Image"
+                    />
+                  </div>
+                  <div class="accordion-text">
+                    <h5 id="grey">
+                      Photoshop / Illustrator / Illustration / Collage
+                    </h5>
+                    <p>
+                      As soon as I moved to Lisbon in 2016 I started a very
+                      strong relationship with the city's musical culture. I
+                      organized concerts, got involved in event production and
+                      developed printed and digital graphic materials (posters,
+                      flyers, banners, among others) with the aim of promoting
+                      these same events. Here you have some examples of artworks
+                      created.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div id="project">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                  id="accordion-button"
+                >
+                  <div class="accordion-titles">
+                    <h5 id="grey">UX/UI & Graphic Design</h5>
+                    <h4>MP Brand & Website</h4>
+                  </div>
+                </button>
+                <hr />
+              </div>
+
+              <div id="collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="accordion-img">
+                    <img
+                      src="./assets/img/Projecto1-1.png"
+                      alt="Project Image"
+                    />
+                  </div>
+                  <div class="accordion-text">
+                    <h5 id="grey">
+                      Photoshop / Illustrator / Illustration / Collage
+                    </h5>
+                    <p>
+                      As soon as I moved to Lisbon in 2016 I started a very
+                      strong relationship with the city's musical culture. I
+                      organized concerts, got involved in event production and
+                      developed printed and digital graphic materials (posters,
+                      flyers, banners, among others) with the aim of promoting
+                      these same events. Here you have some examples of artworks
+                      created.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div id="project">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                  id="accordion-button"
+                >
+                  <div class="accordion-titles">
+                    <h5 id="grey">UX/UI & Graphic Design</h5>
+                    <h4>Advertising Campaign</h4>
+                  </div>
+                </button>
+                <hr />
+              </div>
+
+              <div id="collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="accordion-img">
+                    <img
+                      src="./assets/img/Projecto1-1.png"
+                      alt="Project Image"
+                    />
+                  </div>
+                  <div class="accordion-text">
+                    <h5 id="grey">
+                      Photoshop / Illustrator / Illustration / Collage
+                    </h5>
+                    <p>
+                      As soon as I moved to Lisbon in 2016 I started a very
+                      strong relationship with the city's musical culture. I
+                      organized concerts, got involved in event production and
+                      developed printed and digital graphic materials (posters,
+                      flyers, banners, among others) with the aim of promoting
+                      these same events. Here you have some examples of artworks
+                      created.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div id="project">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                  id="accordion-button"
+                >
+                  <div class="accordion-titles">
+                    <h5 id="grey">Frontend & Team Lead</h5>
+                    <h4>Shape Up Website</h4>
+                  </div>
+                </button>
+                <hr />
+              </div>
+
+              <div id="collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="accordion-img">
+                    <img
+                      src="./assets/img/Projecto1-1.png"
+                      alt="Project Image"
+                    />
+                  </div>
+                  <div class="accordion-text">
+                    <h5 id="grey">
+                      Photoshop / Illustrator / Illustration / Collage
+                    </h5>
+                    <p>
+                      As soon as I moved to Lisbon in 2016 I started a very
+                      strong relationship with the city's musical culture. I
+                      organized concerts, got involved in event production and
+                      developed printed and digital graphic materials (posters,
+                      flyers, banners, among others) with the aim of promoting
+                      these same events. Here you have some examples of artworks
+                      created.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div id="project">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                  id="accordion-button"
+                >
+                  <div class="accordion-titles">
+                    <h5 id="grey">Frontend</h5>
+                    <h4>Flora Website</h4>
+                  </div>
+                </button>
+                <hr />
+              </div>
+
+              <div id="collapseFive" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="accordion-img">
+                    <img
+                      src="./assets/img/Projecto1-1.png"
+                      alt="Project Image"
+                    />
+                  </div>
+                  <div class="accordion-text">
+                    <h5 id="grey">
+                      Photoshop / Illustrator / Illustration / Collage
+                    </h5>
+                    <p>
+                      As soon as I moved to Lisbon in 2016 I started a very
+                      strong relationship with the city's musical culture. I
+                      organized concerts, got involved in event production and
+                      developed printed and digital graphic materials (posters,
+                      flyers, banners, among others) with the aim of promoting
+                      these same events. Here you have some examples of artworks
+                      created.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div id="project">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                  id="accordion-button"
+                >
+                  <div class="accordion-titles">
+                    <h5 id="grey">UX/UI & Graphic Design</h5>
+                    <h4>ANP</h4>
+                  </div>
+                </button>
+                <hr />
+              </div>
+
+              <div id="collapseSix" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="accordion-img">
+                    <img
+                      src="./assets/img/Projecto1-1.png"
+                      alt="Project Image"
+                    />
+                  </div>
+                  <div class="accordion-text">
+                    <h5 id="grey">
+                      Photoshop / Illustrator / Illustration / Collage
+                    </h5>
+                    <p>
+                      As soon as I moved to Lisbon in 2016 I started a very
+                      strong relationship with the city's musical culture. I
+                      organized concerts, got involved in event production and
+                      developed printed and digital graphic materials (posters,
+                      flyers, banners, among others) with the aim of promoting
+                      these same events. Here you have some examples of artworks
+                      created.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- experience 2 -->
-        <div class="experience-container">
-          <p id="date">2022 — 2023</p>
-          <div id="info">
-            <p class="bold">Communication & UX UI Designer</p>
-            <p>Brandit Digital Media Services (Barcelos)</p>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience" id="experience">
+        <h3>Experience</h3>
+
+        <div class="experience-list">
+          <!-- experience 1 -->
+          <div class="experience-container">
+            <p id="date">2023 — 2024</p>
+            <div id="info">
+              <p class="bold">UX UI Designer</p>
+              <p>Mesh Agency (Porto)</p>
+            </div>
+          </div>
+          <!-- experience 2 -->
+          <div class="experience-container">
+            <p id="date">2022 — 2023</p>
+            <div id="info">
+              <p class="bold">Communication & UX UI Designer</p>
+              <p>Brandit Digital Media Services (Barcelos)</p>
+            </div>
+          </div>
+          <!-- experience 3 -->
+          <div class="experience-container">
+            <p id="date">2018 — 2022</p>
+            <div id="info">
+              <p class="bold">
+                Graphic Designer, Social Media Manager & Head of Marketing
+              </p>
+              <p>HUB Group (Lisbon)</p>
+            </div>
+          </div>
+          <!-- experience 4 -->
+          <div class="experience-container">
+            <p id="date">2017 — 2018</p>
+            <div id="info">
+              <p class="bold">Graphic Designer, Production & Communication</p>
+              <p>Sabotage Club (Lisboa)</p>
+            </div>
+          </div>
+          <!-- experience 5 -->
+          <div class="experience-container">
+            <p id="date">2015 — 2016</p>
+            <div id="info">
+              <p class="bold">Graphic Designer Internship</p>
+              <p>Universidade do Porto (Portol)</p>
+            </div>
+          </div>
+          <!-- experience 6 -->
+          <div class="experience-container">
+            <p id="date">2011 — 2012</p>
+            <div id="info">
+              <p class="bold">Video Editing Internship</p>
+              <p>RTP (Vila Nova de Gaia)</p>
+            </div>
           </div>
         </div>
-        <!-- experience 3 -->
-        <div class="experience-container">
-          <p id="date">2018 — 2022</p>
-          <div id="info">
-            <p class="bold">
-              Graphic Designer, Social Media Manager & Head of Marketing
+      </section>
+
+      <!-- Skills -->
+      <section class="skills">
+        <div class="skills-container" id="efeito-scrollReveal1">
+          <!-- Card1 -->
+          <div class="card1-container">
+            <div class="card-skills strategy">
+              <div class="texts">
+                <h5>01</h5>
+                <h2>Strategy</h2>
+              </div>
+              <div class="keywords">
+                <span class="keyword">Scrum</span>
+                <span class="keyword">Miro</span>
+                <span class="keyword">Agile</span>
+                <span class="keyword">Figjam</span>
+                <span class="keyword">Notion</span>
+              </div>
+            </div>
+            <p>
+              My skills fall into three main categories that work together to
+              create an integrated approach. This combination helps ensure that
+              planning, creativity, and technical execution are always aligned.
             </p>
-            <p>HUB Group (Lisbon)</p>
           </div>
-        </div>
-        <!-- experience 4 -->
-        <div class="experience-container">
-          <p id="date">2017 — 2018</p>
-          <div id="info">
-            <p class="bold">Graphic Designer, Production & Communication</p>
-            <p>Sabotage Club (Lisboa)</p>
-          </div>
-        </div>
-        <!-- experience 5 -->
-        <div class="experience-container">
-          <p id="date">2015 — 2016</p>
-          <div id="info">
-            <p class="bold">Graphic Designer Internship</p>
-            <p>Universidade do Porto (Portol)</p>
-          </div>
-        </div>
-        <!-- experience 6 -->
-        <div class="experience-container">
-          <p id="date">2011 — 2012</p>
-          <div id="info">
-            <p class="bold">Video Editing Internship</p>
-            <p>RTP (Vila Nova de Gaia)</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Skills -->
-    <section class="skills">
-      <div class="skills-container" id="efeito-scrollReveal1">
-        <!-- Card1 -->
-        <div class="card1-container">
-          <div class="card-skills strategy">
+          <!-- Card2 -->
+          <div class="card-skills creative" id="efeito-scrollReveal2">
             <div class="texts">
-              <h5>01</h5>
-              <h2>Strategy</h2>
+              <h5>02</h5>
+              <h2>Creative</h2>
             </div>
             <div class="keywords">
-              <span class="keyword">Scrum</span>
-              <span class="keyword">Miro</span>
-              <span class="keyword">Agile</span>
-              <span class="keyword">Figjam</span>
-              <span class="keyword">Notion</span>
+              <span class="keyword">Figma</span>
+              <span class="keyword">Illustrator</span>
+              <span class="keyword">Photoshop</span>
+              <span class="keyword">User Experience</span>
+              <span class="keyword">InDesign</span>
+              <span class="keyword">User Interface</span>
             </div>
           </div>
+
+          <!-- Card3 -->
+          <div class="card-skills development" id="efeito-scrollReveal3">
+            <div class="texts">
+              <h5>03</h5>
+              <h2>Development</h2>
+            </div>
+            <div class="keywords">
+              <span class="keyword">Angular</span>
+              <span class="keyword">Bootstrap</span>
+              <span class="keyword">Wordpress</span>
+              <span class="keyword">Java</span>
+              <span class="keyword">MySQL</span>
+              <span class="keyword">Javascript</span>
+              <span class="keyword">HTML</span>
+              <span class="keyword">CSS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="education" id="education">
+        <h3>Education</h3>
+
+        <div class="education-list">
+          <!-- education 1 -->
+          <div class="education-container">
+            <p id="date">2024 — 2025</p>
+            <div id="info">
+              <p class="bold">Frontend Development</p>
+              <p>CESAE (Porto)</p>
+            </div>
+          </div>
+          <!-- education 2 -->
+          <div class="education-container">
+            <p id="date">2022 — 2023</p>
+            <div id="info">
+              <p class="bold">UX/UI</p>
+              <p>EDIT (Lisbon)</p>
+            </div>
+          </div>
+          <!-- education 3 -->
+          <div class="education-container">
+            <p id="date">2016 — 2018</p>
+            <div id="info">
+              <p class="bold">
+                Contemporary Typographic and Editorial Practices Master Degree
+              </p>
+              <p>FBAUL (Lisbon)</p>
+            </div>
+          </div>
+          <!-- education 4 -->
+          <div class="education-container">
+            <p id="date">2016 — 2017</p>
+            <div id="info">
+              <p class="bold">Semester in Illustration</p>
+              <p>AKV St.Joost (Breda, Holanda)</p>
+            </div>
+          </div>
+          <!-- education 5 -->
+          <div class="education-container">
+            <p id="date">2012 — 2016</p>
+            <div id="info">
+              <p class="bold">Communication Design Degree</p>
+              <p>FBAUP (Porto)</p>
+            </div>
+          </div>
+          <!-- education 6 -->
+          <div class="education-container">
+            <p id="date">2009 — 2012</p>
+            <div id="info">
+              <p class="bold">Audiovisual Communication</p>
+              <p>Escola Artística de Soares dos Reis (Porto)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About me -->
+      <section class="about-me" id="about-me">
+        <h3>
+          In a Middle-earth quest, seeking<br />visual creative solutions...
+        </h3>
+
+        <img src="assets/img/aboutme.png" id="efeito-scrollReveal4" />
+
+        <div class="paragraphs-container">
           <p>
-            My skills fall into three main categories that work together to
-            create an integrated approach. This combination helps ensure that
-            planning, creativity, and technical execution are always aligned.
+            My name is Sofia Santos, but you can call me Shia. I’m a UX/UI
+            Designer who recently became a Frontend Developer, which enables me
+            to follow each project from start to finish—designing, building, and
+            refining it. This gives me the opportunity to create solutions that
+            are visually appealing, meaningful, and functional. <br />I’m always
+            working to improve my communication and to be collaborative and
+            proactive, bringing enthusiasm, curiosity, and a touch of humour to
+            everything I do.
+          </p>
+          <p>
+            Committed to continuous learning, I embrace mistakes as
+            opportunities for growth and stay open to new discoveries along the
+            way. <br />I also have a deep curiosity about other cultures and am
+            always looking to learn new skills—whether it's mastering a design
+            tool, exploring a coding technique, or even how to make the perfect
+            negroni.
           </p>
         </div>
+      </section>
 
-        <!-- Card2 -->
-        <div class="card-skills creative" id="efeito-scrollReveal2">
-          <div class="texts">
-            <h5>02</h5>
-            <h2>Creative</h2>
-          </div>
-          <div class="keywords">
-            <span class="keyword">Figma</span>
-            <span class="keyword">Illustrator</span>
-            <span class="keyword">Photoshop</span>
-            <span class="keyword">User Experience</span>
-            <span class="keyword">InDesign</span>
-            <span class="keyword">User Interface</span>
-          </div>
-        </div>
+      <!--Feedback DESKTOP-->
+      <section class="feedback" id="feedback-desktop">
+        <h3 class="feedback__title">What people say about me</h3>
 
-        <!-- Card3 -->
-        <div class="card-skills development" id="efeito-scrollReveal3">
-          <div class="texts">
-            <h5>03</h5>
-            <h2>Development</h2>
-          </div>
-          <div class="keywords">
-            <span class="keyword">Angular</span>
-            <span class="keyword">Bootstrap</span>
-            <span class="keyword">Wordpress</span>
-            <span class="keyword">Java</span>
-            <span class="keyword">MySQL</span>
-            <span class="keyword">Javascript</span>
-            <span class="keyword">HTML</span>
-            <span class="keyword">CSS</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        <img src="./assets/img/elemento6.png" class="image" id="image6" />
+        <img src="./assets/img/elemento7.png" class="image" id="image7" />
 
-    <!-- Education -->
-    <section class="education" id="education">
-      <h3>Education</h3>
-
-      <div class="education-list">
-        <!-- education 1 -->
-        <div class="education-container">
-          <p id="date">2024 — 2025</p>
-          <div id="info">
-            <p class="bold">Frontend Development</p>
-            <p>CESAE (Porto)</p>
-          </div>
-        </div>
-        <!-- education 2 -->
-        <div class="education-container">
-          <p id="date">2022 — 2023</p>
-          <div id="info">
-            <p class="bold">UX/UI</p>
-            <p>EDIT (Lisbon)</p>
-          </div>
-        </div>
-        <!-- education 3 -->
-        <div class="education-container">
-          <p id="date">2016 — 2018</p>
-          <div id="info">
-            <p class="bold">
-              Contemporary Typographic and Editorial Practices Master Degree
-            </p>
-            <p>FBAUL (Lisbon)</p>
-          </div>
-        </div>
-        <!-- education 4 -->
-        <div class="education-container">
-          <p id="date">2016 — 2017</p>
-          <div id="info">
-            <p class="bold">Semester in Illustration</p>
-            <p>AKV St.Joost (Breda, Holanda)</p>
-          </div>
-        </div>
-        <!-- education 5 -->
-        <div class="education-container">
-          <p id="date">2012 — 2016</p>
-          <div id="info">
-            <p class="bold">Communication Design Degree</p>
-            <p>FBAUP (Porto)</p>
-          </div>
-        </div>
-        <!-- education 6 -->
-        <div class="education-container">
-          <p id="date">2009 — 2012</p>
-          <div id="info">
-            <p class="bold">Audiovisual Communication</p>
-            <p>Escola Artística de Soares dos Reis (Porto)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About me -->
-    <section class="about-me" id="about-me">
-      <h3>
-        In a Middle-earth quest, seeking<br />visual creative solutions...
-      </h3>
-
-      <img src="assets/img/aboutme.png" id="efeito-scrollReveal4" />
-
-      <div class="paragraphs-container">
-        <p>
-          My name is Sofia Santos, but you can call me Shia. I’m a UX/UI
-          Designer who recently became a Frontend Developer, which enables me
-          to follow each project from start to finish—designing, building, and
-          refining it. This gives me the opportunity to create solutions that
-          are visually appealing, meaningful, and functional. <br />I’m always
-          working to improve my communication and to be collaborative and
-          proactive, bringing enthusiasm, curiosity, and a touch of humour to
-          everything I do.
-        </p>
-        <p>
-          Committed to continuous learning, I embrace mistakes as
-          opportunities for growth and stay open to new discoveries along the
-          way. <br />I also have a deep curiosity about other cultures and am
-          always looking to learn new skills—whether it's mastering a design
-          tool, exploring a coding technique, or even how to make the perfect
-          negroni.
-        </p>
-      </div>
-    </section>
-
-    <!--Feedback-->
-    <section class="feedback">
-      <h3 class="feedback__title">What people say about me</h3>
-
-      <img src="./assets/img/elemento6.png" class="image" id="image6" />
-      <img src="./assets/img/elemento7.png" class="image" id="image7" />
-
-      <div class="feedback__cards">
-        <!-- Primeira fila -->
-        <div class="feedback__row1">
-          <!-- Card 1 -->
-          <div class="feedback__card1 cards_feedback_hover">
-            <div class="feedback__card-info">
-              <div class="feedback__card-header">
-                <h4 class="feedback__card-name">Paulo Doellinger</h4>
-                <img class="linkedin_icon" alt="linkedin icon" src="./assets/img/linkedin-icon.svg" />
-                <img class="linkedin_icon_branco" alt="linkedin icon" src="./assets/img/linkedin-icon-branco.svg" />
+        <div class="feedback__cards">
+          <!-- Primeira fila -->
+          <div class="feedback__row1">
+            <!-- Card 1 -->
+            <div class="feedback__card1 cards_feedback_hover">
+              <div class="feedback__card-info">
+                <div class="feedback__card-header">
+                  <h4 class="feedback__card-name">Paulo Doellinger</h4>
+                  <img
+                    class="linkedin_icon"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon.svg"
+                  />
+                  <img
+                    class="linkedin_icon_branco"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon-branco.svg"
+                  />
+                </div>
+                <h5 class="feedback__card-title">Senior Web Developer</h5>
               </div>
-              <h5 class="feedback__card-title">Senior Web Developer</h5>
-            </div>
-            <div class="feedback__card-content">
-              <img src="./assets/img/paulo.png" id="feedback-memoji" />
-              <p class="feedback__card-text">
-                "Sofia is highly focused on identifying problems and solving
-                them. During the time we worked together, she demonstrated an
-                outstanding ability to work as part of a team, always striving
-                to find elegant solutions that made her colleagues' work
-                easier. It was a great pleasure to be her."
-              </p>
-              <h4 class="mensagem-linkedin">Feel free to reach out directly via LinkedIn!</h4>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="feedback__card2 cards_feedback_hover">
-            <div class="feedback__card-info">
-              <div class="feedback__card-header">
-                <h4 class="feedback__card-name">Zita Moura</h4>
-                <img class="linkedin_icon" alt="linkedin icon" src="./assets/img/linkedin-icon.svg" />
-                <img class="linkedin_icon_branco" alt="linkedin icon" src="./assets/img/linkedin-icon-branco.svg" />
+              <div class="feedback__card-content">
+                <img src="./assets/img/paulo.png" id="feedback-memoji" />
+                <p class="feedback__card-text">
+                  "Sofia is highly focused on identifying problems and solving
+                  them. During the time we worked together, she demonstrated an
+                  outstanding ability to work as part of a team, always striving
+                  to find elegant solutions that made her colleagues' work
+                  easier. It was a great pleasure to be her."
+                </p>
+                <h4 class="mensagem-linkedin">
+                  Feel free to reach out directly via LinkedIn!
+                </h4>
               </div>
-              <h5 class="feedback__card-title">
-                European Portuguese Language Lead
-              </h5>
             </div>
-            <div class="feedback__card-content">
-              <img src="./assets/img/zita.png" id="feedback-memoji" />
-              <p class="feedback__card-text">
-                "Working with Sofia was a pleasure. I explained what I needed
-                and why I was concerned about execution, and within minutes,
-                she found a solution that worked perfectly for us to
-                collaborate asynchronously. She provided me with different
-                options and constant feedback, without any fuss, and perfectly
-                within the (tight) deadline I had."
-              </p>
-              <h4 class="mensagem-linkedin">Feel free to reach out directly via LinkedIn!</h4>
-            </div>
-          </div>
-        </div>
 
-        <!-- Segunda fila -->
-        <div class="feedback__row2">
-          <!-- Card 3 -->
-          <div class="feedback__card3 cards_feedback_hover">
-            <div class="feedback__card-info">
-              <div class="feedback__card-header">
-                <h4 class="feedback__card-name">Patti Smith</h4>
-                <img class="linkedin_icon" alt="linkedin icon" src="./assets/img/linkedin-icon.svg" />
-                <img class="linkedin_icon_branco" alt="linkedin icon" src="./assets/img/linkedin-icon-branco.svg" />
+            <!-- Card 2 -->
+            <div class="feedback__card2 cards_feedback_hover">
+              <div class="feedback__card-info">
+                <div class="feedback__card-header">
+                  <h4 class="feedback__card-name">Zita Moura</h4>
+                  <img
+                    class="linkedin_icon"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon.svg"
+                  />
+                  <img
+                    class="linkedin_icon_branco"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon-branco.svg"
+                  />
+                </div>
+                <h5 class="feedback__card-title">
+                  European Portuguese Language Lead
+                </h5>
               </div>
-              <h5 class="feedback__card-title">
-                Pawblic Relations Specialist
-              </h5>
-            </div>
-            <div class="feedback__card-content">
-              <img src="./assets/img/patti.png" id="feedback-memoji" />
-              <p class="feedback__card-text">
-                "Shia is the best mom! She gives me treats, belly rubs, and
-                takes me on mountain adventures. She’s patient, kind, and my
-                best friend."
-              </p>
-              <h4 class="mensagem-linkedin">Sorry, but my dog doesn’t have a LinkedIn account!</h4>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="feedback__card4 cards_feedback_hover">
-            <div class="feedback__card-info">
-              <div class="feedback__card-header">
-                <h4 class="feedback__card-name">Pedro Oliveira</h4>
-                <img class="linkedin_icon" alt="linkedin icon" src="./assets/img/linkedin-icon.svg" />
-                <img class="linkedin_icon_branco" alt="linkedin icon" src="./assets/img/linkedin-icon-branco.svg" />
+              <div class="feedback__card-content">
+                <img src="./assets/img/zita.png" id="feedback-memoji" />
+                <p class="feedback__card-text">
+                  "Working with Sofia was a pleasure. I explained what I needed
+                  and why I was concerned about execution, and within minutes,
+                  she found a solution that worked perfectly for us to
+                  collaborate asynchronously. She provided me with different
+                  options and constant feedback, without any fuss, and perfectly
+                  within the (tight) deadline I had."
+                </p>
+                <h4 class="mensagem-linkedin">
+                  Feel free to reach out directly via LinkedIn!
+                </h4>
               </div>
-              <h5 class="feedback__card-title">Senior Graphic Designer</h5>
-            </div>
-            <div class="feedback__card-content">
-              <img src="./assets/img/pedro.png" id="feedback-memoji" />
-              <p class="feedback__card-text">
-                "Sofia is an excellent colleague. She has a strong ability to
-                integrate into existing teams, is highly perceptive, and
-                professional. She builds empathetic and professional
-                relationships with all clients, always conveying confidence in
-                the positions and ideas she shares."
-              </p>
-              <h4 class="mensagem-linkedin">Feel free to reach out directly via LinkedIn!</h4>
             </div>
           </div>
+
+          <!-- Segunda fila -->
+          <div class="feedback__row2">
+            <!-- Card 3 -->
+            <div class="feedback__card3 cards_feedback_hover">
+              <div class="feedback__card-info">
+                <div class="feedback__card-header">
+                  <h4 class="feedback__card-name">Patti Smith</h4>
+                  <img
+                    class="linkedin_icon"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon.svg"
+                  />
+                  <img
+                    class="linkedin_icon_branco"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon-branco.svg"
+                  />
+                </div>
+                <h5 class="feedback__card-title">
+                  Pawblic Relations Specialist
+                </h5>
+              </div>
+              <div class="feedback__card-content">
+                <img src="./assets/img/patti.png" id="feedback-memoji" />
+                <p class="feedback__card-text">
+                  "Shia is the best mom! She gives me treats, belly rubs, and
+                  takes me on mountain adventures. She’s patient, kind, and my
+                  best friend."
+                </p>
+                <h4 class="mensagem-linkedin">
+                  Sorry, but my dog doesn’t have a LinkedIn account!
+                </h4>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="feedback__card4 cards_feedback_hover">
+              <div class="feedback__card-info">
+                <div class="feedback__card-header">
+                  <h4 class="feedback__card-name">Pedro Oliveira</h4>
+                  <img
+                    class="linkedin_icon"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon.svg"
+                  />
+                  <img
+                    class="linkedin_icon_branco"
+                    alt="linkedin icon"
+                    src="./assets/img/linkedin-icon-branco.svg"
+                  />
+                </div>
+                <h5 class="feedback__card-title">Senior Graphic Designer</h5>
+              </div>
+              <div class="feedback__card-content">
+                <img src="./assets/img/pedro.png" id="feedback-memoji" />
+                <p class="feedback__card-text">
+                  "Sofia is an excellent colleague. She has a strong ability to
+                  integrate into existing teams, is highly perceptive, and
+                  professional. She builds empathetic and professional
+                  relationships with all clients, always conveying confidence in
+                  the positions and ideas she shares."
+                </p>
+                <h4 class="mensagem-linkedin">
+                  Feel free to reach out directly via LinkedIn!
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback  MOBILE -->
+      <section class="feedback-mobile" id="feedback-mobile">
+        <div class="carousel-container">
+          <img
+            src="./assets/img/arrow-left.svg"
+            alt="Seta Esquerda"
+            class="carousel-arrow left-arrow"
+          />
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <!-- Card 1 -->
+              <div class="feedback__card" data-index="1">
+                <div class="feedback__card-info">
+                  <div class="feedback__card-header">
+                    <h4 class="feedback__card-name">Paulo Doellinger</h4>
+                    <img
+                      class="linkedin_icon"
+                      alt="linkedin icon"
+                      src="./assets/img/linkedin-icon.svg"
+                    />
+                  </div>
+                  <h5 class="feedback__card-title">Senior Web Developer</h5>
+                </div>
+                <div class="feedback__card-content">
+                  <img src="./assets/img/paulo.png" class="feedback-memoji" />
+                  <p class="feedback__card-text">
+                    "Sofia is highly focused on identifying problems and solving
+                    them. During the time we worked together, she demonstrated
+                    an outstanding ability to work as part of a team, always
+                    striving to find elegant solutions that made her colleagues'
+                    work easier. It was a great pleasure to be her."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="feedback__card" data-index="2">
+                <div class="feedback__card-info">
+                  <div class="feedback__card-header">
+                    <h4 class="feedback__card-name">Maria Silva</h4>
+                    <img
+                      class="linkedin_icon"
+                      alt="linkedin icon"
+                      src="./assets/img/linkedin-icon.svg"
+                    />
+                  </div>
+                  <h5 class="feedback__card-title">Product Manager</h5>
+                </div>
+                <div class="feedback__card-content">
+                  <img src="./assets/img/maria.png" class="feedback-memoji" />
+                  <p class="feedback__card-text">
+                    "Trabalhar com Sofia foi uma experiência enriquecedora. Ela
+                    tem um olhar atento para detalhes e é extremamente proativa
+                    na busca de soluções eficientes."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="feedback__card" data-index="3">
+                <div class="feedback__card-info">
+                  <div class="feedback__card-header">
+                    <h4 class="feedback__card-name">João Pereira</h4>
+                    <img
+                      class="linkedin_icon"
+                      alt="linkedin icon"
+                      src="./assets/img/linkedin-icon.svg"
+                    />
+                  </div>
+                  <h5 class="feedback__card-title">UI/UX Designer</h5>
+                </div>
+                <div class="feedback__card-content">
+                  <img src="./assets/img/joao.png" class="feedback-memoji" />
+                  <p class="feedback__card-text">
+                    "A criatividade de Sofia se destaca em cada projeto. Ela
+                    sempre traz soluções inovadoras e facilita muito o trabalho
+                    em equipe."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="feedback__card" data-index="4">
+                <div class="feedback__card-info">
+                  <div class="feedback__card-header">
+                    <h4 class="feedback__card-name">Ana Costa</h4>
+                    <img
+                      class="linkedin_icon"
+                      alt="linkedin icon"
+                      src="./assets/img/linkedin-icon.svg"
+                    />
+                  </div>
+                  <h5 class="feedback__card-title">Data Scientist</h5>
+                </div>
+                <div class="feedback__card-content">
+                  <img src="./assets/img/ana.png" class="feedback-memoji" />
+                  <p class="feedback__card-text">
+                    "Sofia demonstra uma capacidade analítica impressionante,
+                    sempre focada em resultados concretos. Trabalhar com ela foi
+                    extremamente produtivo."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="./assets/img/arrow-right.svg"
+            alt="Seta Direita"
+            class="carousel-arrow right-arrow"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer" id="footer">
+      <!--infos TOP-->
+      <div class="footer__top">
+        <div class="footer__contents">
+          <div class="footer__contacts">
+            <div class="footer__caption">
+              <h5 class="footer__title">Contacts</h5>
+            </div>
+            <div class="footer__list-contacts">
+              <h4 class="footer__contact-name">Sofia Santos</h4>
+              <h4 class="footer__contact-email">
+                sofiabrandaosantos@gmail.com
+              </h4>
+              <h4 class="footer__contact-phone">+351 918 186 993</h4>
+            </div>
+          </div>
+
+          <div class="footer__social-media">
+            <div class="footer__caption">
+              <h5 class="footer__title">Social Media</h5>
+            </div>
+            <div class="footer__list-social-media">
+              <button class="footer__button footer__button--linkedin">
+                Linkedin
+              </button>
+              <button class="footer__button footer__button--behance">
+                Behance
+              </button>
+              <button class="footer__button footer__button--github">
+                GitHub
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!--Footer-->
-  <footer class="footer" id="footer">
-    <!--infos TOP-->
-    <div class="footer__top">
-      <div class="footer__contents">
-        <div class="footer__contacts">
-          <div class="footer__caption">
-            <h5 class="footer__title">Contacts</h5>
-          </div>
-          <div class="footer__list-contacts">
-            <h4 class="footer__contact-name">Sofia Santos</h4>
-            <h4 class="footer__contact-email">
-              sofiabrandaosantos@gmail.com
-            </h4>
-            <h4 class="footer__contact-phone">+351 918 186 993</h4>
-          </div>
+      <!--infos BOTTOM-->
+      <div class="footer__bottom">
+        <div class="footer__talk">
+          <h1 class="footer__talk-title">Let's Talk</h1>
+          <button
+            onclick="window.location.href='mailto:sofiabrandaosantos@gmail.com?subject=Assunto&body=Texto%20do%20corpo'"
+            class="contactme__button"
+          >
+            Contact me now<img
+              src="./assets/img/envelope.png"
+              alt="Ícone"
+              class="button-icon"
+            />
+          </button>
         </div>
-
-        <div class="footer__social-media">
-          <div class="footer__caption">
-            <h5 class="footer__title">Social Media</h5>
-          </div>
-          <div class="footer__list-social-media">
-            <button class="footer__button footer__button--linkedin">
-              Linkedin
-            </button>
-            <button class="footer__button footer__button--behance">
-              Behance
-            </button>
-            <button class="footer__button footer__button--github">
-              GitHub
-            </button>
-          </div>
+        <div class="footer__copyrights">
+          <hr class="footer__hr" />
+          <h5 class="footer__copyrights-text">
+            © 2025 Sofia Santos. All rights reserved
+          </h5>
         </div>
       </div>
-    </div>
+      <img src="./assets/img/origami.png" class="image" id="image5" />
+    </footer>
 
-    <!--infos BOTTOM-->
-    <div class="footer__bottom">
-      <div class="footer__talk">
-        <h1 class="footer__talk-title">Let's Talk</h1>
-        <button
-          onclick="window.location.href='mailto:sofiabrandaosantos@gmail.com?subject=Assunto&body=Texto%20do%20corpo'"
-          class="contactme__button">
-          Contact me now<img src="./assets/img/envelope.png" alt="Ícone" class="button-icon" />
-        </button>
-      </div>
-      <div class="footer__copyrights">
-        <hr class="footer__hr" />
-        <h5 class="footer__copyrights-text">
-          © 2025 Sofia Santos. All rights reserved
-        </h5>
-      </div>
-    </div>
-    <img src="./assets/img/origami.png" class="image" id="image5" />
-  </footer>
-
-  <!-- Link JavaScript -->
-  <script src="./assets/js/script.js"></script>
-  <!-- scrollreveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- link bootstrap js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</body>
-
+    <!-- Link JavaScript -->
+    <script src="./assets/js/script.js"></script>
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- link bootstrap js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+      integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>

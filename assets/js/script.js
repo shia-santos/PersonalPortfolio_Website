@@ -85,10 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // **************** HOVER H4 E ICON LINKEDIN CARDS FEEDBACK
+
 const cardsTodos = document.querySelectorAll(".cards_feedback_hover");
 
 function hoverFeedback(event) {
-  const card = event.currentTarget; // Captura o card específico que acionou o evento
+  const card = event.currentTarget;
   const H4novo = card.querySelector(".mensagem-linkedin");
   const pAntigo = card.querySelector(".feedback__card-text");
   const linkedinIconAntigo = card.querySelector(".linkedin_icon");
@@ -101,7 +102,7 @@ function hoverFeedback(event) {
 }
 
 function hoverFeedback2(event) {
-  const card = event.currentTarget; // Captura o card específico que acionou o evento
+  const card = event.currentTarget;
   const H4novo = card.querySelector(".mensagem-linkedin");
   const pAntigo = card.querySelector(".feedback__card-text");
   const linkedinIconAntigo = card.querySelector(".linkedin_icon");
@@ -122,19 +123,62 @@ cardsTodos.forEach((card) => {
 // **************** BOTAO CONTACT ME HOVER ICONE PARA BRANCO
 
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".contactme__button");
+  const button = document.querySelector(".footer__button--contact");
+  const icon = button.querySelector(".button-icon");
 
-  buttons.forEach((button) => {
-    const icon = button.querySelector(".button-icon");
-    const originalSrc = icon.src;
-    const hoverSrc = "./assets/img/envelopeHover.png";
+  const originalSrc = icon.src;
 
-    button.addEventListener("mouseover", () => {
-      icon.src = hoverSrc;
-    });
+  const hoverSrc = "./assets/img/envelopeHover.png";
 
-    button.addEventListener("mouseout", () => {
-      icon.src = originalSrc;
-    });
+  button.addEventListener("mouseover", () => {
+    icon.src = hoverSrc;
   });
+
+  button.addEventListener("mouseout", () => {
+    icon.src = originalSrc;
+  });
+});
+
+/* **************** FEEDBACK MOBILE EXPERIENCIA */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".carousel");
+  const slides = document.querySelectorAll(".feedback__card");
+  const prevButton = document.querySelector(".left-arrow");
+  const nextButton = document.querySelector(".right-arrow");
+
+  let currentIndex = 0;
+  const slideWidth = slides[0].offsetWidth; // Pega a largura do slide para calcular deslocamento
+
+  // Atualiza a posição do carrossel
+  function updateSlidePosition() {
+    container.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  // Avança para o próximo slide
+  nextButton.addEventListener("click", function () {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // Retorna ao primeiro slide
+    }
+    updateSlidePosition();
+  });
+
+  // Retrocede para o slide anterior
+  prevButton.addEventListener("click", function () {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = slides.length - 1; // Vai para o último slide
+    }
+    updateSlidePosition();
+  });
+
+  // Ajusta o container para que os slides fiquem em linha
+  container.style.display = "flex";
+  container.style.transition = "transform 0.5s ease-in-out";
+
+  // Define largura fixa do container para comportar todos os slides corretamente
+  container.style.width = `${slides.length * slideWidth}px`;
 });
