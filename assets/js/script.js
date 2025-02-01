@@ -114,7 +114,6 @@ function hoverFeedback2(event) {
   linkedinIconNovo.style.display = "none";
 }
 
-// Adiciona eventos de mouseover e mouseout para cada card individualmente
 cardsTodos.forEach((card) => {
   card.addEventListener("mouseover", hoverFeedback);
   card.addEventListener("mouseout", hoverFeedback2);
