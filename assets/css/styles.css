@@ -129,7 +129,7 @@ header {
   background-color: var(--color-background);
   color: var(--color-primary);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  z-index: 2;
+  z-index: 6;
   top: 0;
 }
 
@@ -1021,6 +1021,9 @@ a:visited, a:hover, a:active, a:focus {
     margin-top: 20%; 
   }
 
+  h3{
+    font-size: 36px;
+  }
 
   /* ******************* HERO */
   .hero #h1garamond {
@@ -1227,7 +1230,7 @@ a:visited, a:hover, a:active, a:focus {
       position: relative;
       overflow: hidden; 
       width: 340px; 
-      margin-top: 240px;
+      margin-top: 260px;
       margin-bottom: 180px;
     }
     
@@ -1295,8 +1298,8 @@ a:visited, a:hover, a:active, a:focus {
     }
 
     #image6 {
-      top: 4%; 
-      left: 0%; 
+      top: 80px; 
+      left: 0; 
       max-height: 550px;
       height: auto;
       max-width: 100%;
@@ -1305,7 +1308,7 @@ a:visited, a:hover, a:active, a:focus {
     }
 
     #image7 {
-      bottom: -1%; 
+      bottom: -8px; 
       right: 0%;
       max-height: 550px;
       height: auto;
