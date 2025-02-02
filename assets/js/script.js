@@ -23,6 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+/* **************** IMAGENS ACORDEÃO */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectImages = document.querySelectorAll(".accordion-img");
+
+  projectImages.forEach((project) => {
+    let images = project.querySelectorAll("img");
+    let currentIndex = 0;
+
+    function changeImage() {
+      images[currentIndex].style.display = "none";
+
+      currentIndex = (currentIndex + 1) % images.length;
+
+      images[currentIndex].style.display = "block";
+    }
+
+    setInterval(changeImage, 2500);
+  });
+});
 
 // **************** EFEITO SCROLLREVEAL
 
@@ -122,23 +142,24 @@ cardsTodos.forEach((card) => {
 // **************** BOTAO CONTACT ME HOVER ICONE PARA BRANCO
 
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector(".footer__button--contact");
-  const icon = button.querySelector(".button-icon");
+  const buttons = document.querySelectorAll(".contactme__button");
 
-  const originalSrc = icon.src;
+  buttons.forEach((button) => {
+    const icon = button.querySelector(".button-icon");
+    const originalSrc = icon.src;
+    const hoverSrc = "./assets/img/envelopeHover.png";
 
-  const hoverSrc = "./assets/img/envelopeHover.png";
+    button.addEventListener("mouseover", () => {
+      icon.src = hoverSrc;
+    });
 
-  button.addEventListener("mouseover", () => {
-    icon.src = hoverSrc;
-  });
-
-  button.addEventListener("mouseout", () => {
-    icon.src = originalSrc;
+    button.addEventListener("mouseout", () => {
+      icon.src = originalSrc;
+    });
   });
 });
 
-/* **************** FEEDBACK MOBILE EXPERIENCIA */
+/* **************** FEEDBACK MOBILE CAROUSEL EXPERIENCIA */
 
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".carousel");
@@ -147,37 +168,58 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextButton = document.querySelector(".right-arrow");
 
   let currentIndex = 0;
-  const slideWidth = slides[0].offsetWidth; // Pega a largura do slide para calcular deslocamento
+  const slideWidth = slides[0].offsetWidth;
 
-  // Atualiza a posição do carrossel
   function updateSlidePosition() {
     container.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
-  // Avança para o próximo slide
   nextButton.addEventListener("click", function () {
     if (currentIndex < slides.length - 1) {
       currentIndex++;
     } else {
-      currentIndex = 0; // Retorna ao primeiro slide
+      currentIndex = 0;
     }
     updateSlidePosition();
   });
 
-  // Retrocede para o slide anterior
   prevButton.addEventListener("click", function () {
     if (currentIndex > 0) {
       currentIndex--;
     } else {
-      currentIndex = slides.length - 1; // Vai para o último slide
+      currentIndex = slides.length - 1;
     }
     updateSlidePosition();
   });
 
-  // Ajusta o container para que os slides fiquem em linha
   container.style.display = "flex";
   container.style.transition = "transform 0.5s ease-in-out";
 
-  // Define largura fixa do container para comportar todos os slides corretamente
   container.style.width = `${slides.length * slideWidth}px`;
+});
+
+/* **************** BOTÕES LINKS LINKEDIN, GITHUB, BEHANCE */
+
+document.addEventListener("DOMContentLoaded", function () {
+  function openInNewTab(url) {
+    window.open(url, "_blank");
+  }
+
+  document
+    .getElementById("linkedinButton")
+    .addEventListener("click", function () {
+      openInNewTab("https://www.linkedin.com/in/shiasantos/");
+    });
+
+  document
+    .getElementById("behanceButton")
+    .addEventListener("click", function () {
+      openInNewTab("https://www.behance.net/shiasantos");
+    });
+
+  document
+    .getElementById("githubButton")
+    .addEventListener("click", function () {
+      openInNewTab("https://github.com/shia-santos");
+    });
 });
