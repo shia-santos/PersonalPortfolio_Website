@@ -980,8 +980,9 @@ a:visited, a:hover, a:active, a:focus {
   }
 
   /* ******************* HEADER / NAVBAR */
-  header {
-    padding: 10px 0; 
+
+  .header-container{
+    padding: 0; 
   }
 
   .nav-container {
@@ -990,6 +991,7 @@ a:visited, a:hover, a:active, a:focus {
     height: 120px;        
     padding-left: 24px;
     padding-right: 24px;
+    padding-top: 24px;
     z-index: 9999 !important;
     justify-content: center;
   }
